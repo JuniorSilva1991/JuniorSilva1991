@@ -1,0 +1,401 @@
+/* Template: Starwars Front-End Challenge
+   Author: Junior Silva
+   Created: Apr 2021
+   Description: Master CSS file
+   */
+
+/*****************************************
+Table Of Contents:
+
+01. General Styles
+02. Preloader
+03. Font Color
+04. Button Style
+05. Features
+06. Copyright
+******************************************/
+
+/******************************/
+/*     01. General Styles     */
+/******************************/
+
+/* RESET BROWSER MARGINS AND PADDING DEFAULT, REMOVE RIMS FROM INPUTS AND CALCULATES WIDTH IN BOXES */
+* {
+	margin: 0; 
+	padding: 0; 
+	outline: none; 
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+body,
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body, p {
+	color: #fff; 
+	font-size: 12px;
+}
+
+body {
+	background-color: #08080A;
+	font-family: montserrat;
+	font-size: 16px;
+	font-weight: 400;
+	color:#505050;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 { color: #f1f1f8; font-family: montserrat; margin-top:0; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
+h1 {font-size: 48px; line-height: 45px; margin-bottom: 25px; font-weight: 700; }
+h2 {font-size: 32px; line-height: 39px; margin-bottom: 25px; font-weight: 700; }
+h3 {font-size: 28px; line-height: 34px; margin-bottom: 20px; font-weight: 700; }
+h4 {font-size: 24px; line-height: 29px; margin-bottom: 15px; font-weight: 500; }
+h5 {font-size: 18px; line-height: 24px; margin-bottom: 10px; font-weight: 500; }
+h6 {font-size: 16px; line-height: 22px; margin-bottom: 10px; font-weight: 500; }
+
+@media only screen and (max-width: 767px) {
+	h1{font-size: 30px; line-height: 40px; margin-bottom: 20px; font-weight: 700; }
+	h2{font-size: 26px; line-height: 35px; margin-bottom: 20px; font-weight: 700; }
+	h3{font-size: 24px; line-height: 30px; margin-bottom: 15px; font-weight: 700; }
+}
+
+a {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 15px;
+	text-align: center;
+	text-transform: capitalize;
+
+	color: #FFFFFF;
+}
+
+a:hover {
+	color: #f1f1f8;
+	text-decoration: underline;
+}
+
+a.turquoise {
+	color: #00c9db;
+}
+
+a.white {
+	color: #fff;
+}
+
+.p-large {
+	color: #f1f1f8;
+	font: 400 1rem/1.5rem "Open Sans", sans-serif;
+}
+
+.p-small {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 15px;
+}
+
+.p-heading {
+	margin-bottom: 3.75rem;
+	text-align: center;
+}
+
+.li-space-lg li {
+	margin-bottom: 0.375rem;
+}
+
+.indent {
+	padding-left: 1.25rem;
+}
+
+.upp{text-transform: uppercase;}
+.t-center{text-align: center;}
+.t-left{text-align: left;}
+.t-right{text-align: right;}
+
+.basic{
+	padding-top: 4.2rem;
+	padding-bottom: 3.5rem;
+	background-color: #08080A;
+}
+
+.grid{
+	text-align: center;
+}
+.logowars img{
+	width: 144.5px;
+	height: 54.17px;
+	padding: 0px;
+	margin-top: 60px;
+	margin-bottom: 0px;
+}
+
+.card{
+	position: relative;
+	width: 358px;
+	height: 220px;
+	/*	left: 85px;*/
+	top: 50px;
+	background: #16171D;
+	border: 1px #7B61FF;
+	box-sizing: border-box;
+	border-radius: 5px;
+	padding: 15px 30px 0;
+	margin-bottom: 25px;
+}
+.card:hover{
+	background: #122ffe;
+}
+.title-description{
+	display: inline-block;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 24px;
+	color: #B0AFAF!important;
+	margin-bottom: 0px;
+}
+.sub-description{
+	font-size: 16px;
+	font-weight: 900;
+	margin-bottom: 10px;
+}
+.description{
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 32px;
+}
+
+/* Classic movies collection */
+.title{
+	position: absolute;
+	width: 505px;
+	height: 39px;
+	left: 386px;
+	top: 172px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 39px;
+	text-align: center;
+	text-transform: uppercase;
+
+	color: #FFFFFF;
+}
+
+.pb15{padding-bottom: 15px!important;}
+.pb40{padding-bottom: 40px!important;}
+
+span.back-text{
+	-webkit-text-stroke: 1px rgba(255,255,255,0.2);
+	transform: translateY(-113%);
+	font-size: 140px;
+	font-weight: 700;
+	text-transform: uppercase;
+	/*	-webkit-text-stroke: 1px #f6f7f8;*/
+	-webkit-text-fill-color: transparent;
+	margin: 50px 0px 50px 190px;
+	line-height: 1;
+	position: absolute;
+	transform: translateY(-114%);
+	right: 0;
+	/* left: 12px; */
+}
+
+strong{
+	font-weight: 100;
+}
+
+/******************************/
+/*     02. Button Styles     */
+/******************************/
+.btn-solid-reg {
+	display: inline-block;
+	padding: 1.1875rem 2.125rem 1.1875rem 2.125rem;
+	border: 1px solid #FFFFFF;
+	box-sizing: border-box;
+	border-radius: 5px;
+	background-color: transparent;
+	color: #fff;
+	font: 700 0.75rem/0 "Montserrat", sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-solid-reg:hover {
+	background-color: #fff;
+	color: #122ffe;
+	text-decoration: none;
+}
+
+/******************************/
+/*     03. Font Color.        */
+/******************************/
+
+.f-blue {color: #0112FE;}
+.f-black {color: #08080A;}
+.f-dark-gray {color: #16171D;}
+.f-light-gray {color: #B0AFAF;}
+.f-white {color: #FFFFFF;}
+
+
+/*************************/
+/*     02. Preloader     */
+/*************************/
+.spinner-wrapper {
+	position: fixed;
+	z-index: 999999;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #2f2c3d;
+}
+
+.spinner {
+	position: absolute;
+	top: 50%; /* centers the loading animation vertically one the screen */
+	left: 50%; /* centers the loading animation horizontally one the screen */
+	width: 3.75rem;
+	height: 1.25rem;
+	margin: -0.625rem 0 0 -1.875rem; /* is width and height divided by two */ 
+	text-align: center;
+}
+
+.spinner > div {
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 100%;
+	background-color: #fff;
+	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+	0%, 80%, 100% { -webkit-transform: scale(0); }
+	40% { -webkit-transform: scale(1.0); }
+}
+
+@keyframes sk-bouncedelay {
+	0%, 80%, 100% { 
+		-webkit-transform: scale(0);
+		-ms-transform: scale(0);
+		transform: scale(0);
+		} 40% { 
+			-webkit-transform: scale(1.0);
+			-ms-transform: scale(1.0);
+			transform: scale(1.0);
+		}
+	}
+
+	
+	/************************/
+	/*     05. Features     */
+	/************************/
+	.tabs {
+		padding-top: 0.1rem;
+		padding-bottom: 4.25rem;
+		background: #08080A;
+	}
+
+	.tabs h2 {
+		margin-top: 100px;
+		margin-bottom: 1.125rem;
+		text-align: center;
+	}
+
+	/*************************/
+	/*     6. Copyright     */
+	/*************************/
+	.copyright {
+		padding-top: 1rem;
+		padding-bottom: 0.5rem;
+		background-color: #08080A;
+		text-align: center;
+	}
+
+	.copyright .p-small {
+		color: #f1f1f8;
+		opacity: 0.6;
+		font-family: Montserrat;
+	}
+
+	.on-smart {display: none}
+	.on-desktop {visibility: visible}
+
+	/*****************************/
+	/*     20. Media Queries     */
+	/*****************************/	
+	@media (max-width: 576px) {
+		.container{max-width: 540px;}
+		.card{width: auto;}	
+		h3{font-size: 32px;}
+	}
+
+	/* Min-width width 768px */
+	@media (min-width: 768px) {
+		/* General Styles */
+		.container {
+			height: auto !important;
+			padding: 0px !important;
+		}
+
+
+
+		h1 {font-size: 48px;}
+
+		h3 {font-size: 32px;}
+		/* end of general styles */
+
+		/* Min-width width 992px */
+		@media (min-width: 992px) {
+			.container {
+				height: auto !important;
+				padding: 0px !important;
+			}
+			.card{width: auto;}	
+			h3 {font-size: 28px;}
+			
+		}
+		/* end of min-width width 992px */
+
+		@media (max-width: 975px) {
+			.container {max-width: 720px;}
+			h3 {font-size: 28px;}
+		}
+		/* Min-width width 1200px */
+		@media (min-width: 1200px) {
+
+			/* Features */
+			.tabs {padding-bottom: 6.5rem;}
+			.card {width: auto;}	
+			h3 {font-size: 32px;}
+			.on-smart {display: block;}
+			/* end of features */
+		}
+/* end of min-width width 1200px */
